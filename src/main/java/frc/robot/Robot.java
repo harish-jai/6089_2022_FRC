@@ -7,8 +7,9 @@
 
 package frc.robot;
 
-import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.TimedRobot;
+import frc.robot.commands.DumpBackAuton;
+import frc.robot.commands.BackUpAuton;
 
 
 /**
@@ -22,6 +23,8 @@ public class Robot extends TimedRobot {
   
 	public static Drivetrain drivetrain;
 	public static OI oi;
+	public DumpBackAuton auton1;
+	public BackUpAuton auton2;
 
 	// public DoubleSolenoid shoot1;
 	// public DoubleSolenoid shoot2;
@@ -55,7 +58,9 @@ public class Robot extends TimedRobot {
 	
 	@Override
 	public void autonomousInit() {
-		
+		auton1.execute(); //uncomment this to run dump back auton
+		//auton2.execute(); //uncomment this to run back up auton
+		//TODO: ADD SUPPORT FOR A SWITCH TO DECIDE WHICH AUTON TO RUN
 	}
 
 	/**
